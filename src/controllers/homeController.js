@@ -8,7 +8,7 @@ exports.index = async (req, res) => {
         {
             layout: 'main', // this is the default layout, but it's good to be explicit
             title: 'Welcome to BabelDev Interviewer',
-            alerts: 'BabelDev Interviewer - By Apex', // content for the top bar
+            alerts: 'BabelDev AI-Interviewer. By: Apex Systems', // content for the top bar
             sidebar: 'Your Interview Stages', 
             openAIMessage: agentMsg.message.content,
             interviewStages: stages
