@@ -1,43 +1,9 @@
+// styles.scss
+
+// Import the layout styles
+@import 'layout';
+
 :root {
     --bg-color: #000b73;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
-}
-.container {
-    display: flex;
-}
-.sidebar {
-    width: 180px;
-    background-color:var(--bg-color);
-    color: #fff;
-    padding: 20px;
-    height: 100vh;
-
-    .MenuItem {
-        padding: 8px;
-        cursor: pointer;
-        border-radius: 8px;
-    }
-    .MenuItem:hover {
-        background-color: #ffffff19;
-    }
-}
-.main-content {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #fff;
-    margin-left: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.widget {
-    border: 1px solid #e1e4e8;
-    padding: 20px;            
-    margin-bottom: 20px;
-    border-radius: 10px;            
-    background: linear-gradient(to bottom right, #5f4bbb, #9589d1);
-    color: #ffffff;
-    /* Add other styles as needed */
+    --font-color: #ffffff;
 }

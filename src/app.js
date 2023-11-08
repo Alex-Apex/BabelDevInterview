@@ -23,14 +23,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Static files directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
+app.use('/js', express.static(__dirname + '/node_modules/htmx.org/dist/'));
 
 // Define routes
 app.get('/', (req, res) => {
     res.render('home', {
-        title: 'Welcome to BabelDev Interviewer'
+        layout: 'main', // this is the default layout, but it's good to be explicit
+        title: 'Welcome to BabelDev Interviewer',
+        alerts: 'BabelDev Interviewer - By Apex', // content for the top bar
+        sidebar: 'This is the sidebar content' // content for the sidebar
     });
 });
+
 
 // Sample route for the interview API
 app.post('/interview', async (req, res) => {

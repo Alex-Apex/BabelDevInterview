@@ -5,10 +5,11 @@
   "main": "src/app.js",
   "scripts": {
     "compile-sass": "sass --watch src/scss:public/styles",
-    "sass": "sass --watch src/scss/scss:public/styles",
+    "sass": "sass --watch src/scss:public/styles",
     "start": "node src/app.js",
-    "dev": "concurrently \"nodemon src/app.js\" \"sass --watch scss:public/stylesheets\"",
-    "test": "jest"
+    "dev": "concurrently \"nodemon src/app.js\" \"sass --watch scss:public/styles\"",
+    "test": "jest",
+    "postinstall": "cp node_modules/htmx.org/dist/htmx.min.js public/javascripts/vendor/htmx.min.js"
   },
   "keywords": [],
   "author": "",
