@@ -1,11 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const dotenv = require('dotenv');
 const { engine } = require('express-handlebars');
 const OpenAI = require('openai');
-
-// Load environment variables
-dotenv.config();
+const homeRoutes = require('./routes/homeRoutes');
 
 // Initialize Express
 const app = express();
@@ -27,14 +25,7 @@ app.use(express.static('public'));
 app.use('/js', express.static(__dirname + '/node_modules/htmx.org/dist/'));
 
 // Define routes
-app.get('/', (req, res) => {
-    res.render('home', {
-        layout: 'main', // this is the default layout, but it's good to be explicit
-        title: 'Welcome to BabelDev Interviewer',
-        alerts: 'BabelDev Interviewer - By Apex', // content for the top bar
-        sidebar: 'This is the sidebar content' // content for the sidebar
-    });
-});
+app.use('/', homeRoutes);
 
 
 // Sample route for the interview API

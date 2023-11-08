@@ -15,8 +15,12 @@
     </div>
     <div id="container">
         <aside id="sidebar">
-            <!-- Sidebar content goes here -->
-            {{{sidebar}}}
+            <h2>{{{sidebar}}}</h2>
+            {{#each interviewStages}}
+                <div class="sideBarMenuItem">
+                    {{this.StageName}}
+                </div>
+            {{/each}}
         </aside>
         <main id="content">
             <!-- Main content goes here -->
