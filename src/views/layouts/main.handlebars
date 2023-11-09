@@ -25,7 +25,14 @@
         <main id="content">
             <!-- Main content goes here -->
             {{{body}}}
+            <!-- src/views/yourView.handlebars -->
         </main>
+        <form id="ai-interaction-form" action="/interact-with-ai" method="post">
+            <div class="txtUserTextbox">
+                <textarea id="user-input" name="userInput" placeholder="Type your message here..." required></textarea>
+                <button type="submit">Send</button>
+            </div>
+        </form>
     </div>
     <script src="/javascripts/script.js"></script>
 </body>

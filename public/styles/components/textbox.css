@@ -1,0 +1,34 @@
+#ai-interaction-form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+  margin-left: 80px;
+  grid-area: user;
+}
+#ai-interaction-form #user-input {
+  padding: 0.5rem;
+  border: none;
+  width: 100%;
+}
+#ai-interaction-form button {
+  padding: 0.5rem 1rem;
+  margin: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+#ai-interaction-form button:hover {
+  background-color: #0056b3;
+}
+#ai-interaction-form .txtUserTextbox {
+  width: 100%;
+  border: 2px solid #999999;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=textbox.css.map */

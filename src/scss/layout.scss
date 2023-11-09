@@ -36,7 +36,10 @@ body {
   display: grid;
   grid-area: content;
   height: calc(100vh - #{$top-bar-height}); // 100vh - height of top bar
-  grid-template-areas: "sidebar main";
+  grid-template-areas: 
+  "sidebar main"
+  "sidebar main"
+  "sidebar user";
   grid-template-columns: $sidebar-width auto;
 }
 
