@@ -15,16 +15,16 @@
   margin: 8px;
   border: none;
   border-radius: 4px;
-  background-color: #007bff;
-  color: white;
+  background-color: #44546A;
+  color: #fff;
   cursor: pointer;
 }
 #ai-interaction-form button:hover {
-  background-color: #0056b3;
+  background-color: #9FE2D8;
 }
 #ai-interaction-form .txtUserTextbox {
   width: 100%;
-  border: 2px solid #999999;
+  border: 2px solid #808083;
   border-radius: 8px;
   display: flex;
   flex-direction: row;

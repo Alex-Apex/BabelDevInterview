@@ -1,10 +1,3 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
-
 body {
   display: grid;
   grid-template-rows: 50px auto;
@@ -15,8 +8,8 @@ body {
 #top-bar {
   grid-area: topbar;
   height: 50px;
-  background-color: #333;
-  color: white;
+  background-color: #44546A;
+  color: #7C95A5;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -33,11 +26,12 @@ body {
   grid-template-areas: "sidebar main" "sidebar main" "sidebar user";
   grid-template-rows: 1fr auto 80px;
   grid-template-columns: 250px auto;
+  background-color: #fff;
 }
 
 #sidebar {
   grid-area: sidebar;
-  background-color: #f4f4f4;
+  background-color: #D2DDE8;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -46,6 +40,7 @@ body {
   grid-area: main;
   padding: 20px;
   overflow-y: auto;
+  background-color: #fff;
 }
 
 #ai-interaction-form {
@@ -65,25 +60,28 @@ body {
   margin: 8px;
   border: none;
   border-radius: 4px;
-  background-color: #007bff;
-  color: white;
+  background-color: #44546A;
+  color: #fff;
   cursor: pointer;
 }
 #ai-interaction-form button:hover {
-  background-color: #0056b3;
+  background-color: #9FE2D8;
 }
 #ai-interaction-form .txtUserTextbox {
   width: 100%;
-  border: 2px solid #999999;
+  border: 2px solid #808083;
   border-radius: 8px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-:root {
-  --bg-color: #000b73;
-  --font-color: #ffffff;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #D2DDE8;
+  font-family: Helvetica;
 }
 
 /*# sourceMappingURL=styles.css.map */

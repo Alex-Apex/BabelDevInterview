@@ -1,11 +1,14 @@
 // styles.scss
-
-// Import the layout styles
+@import 'variables';
 @import 'layout';
 @import 'components/textbox';
 
-:root {
-    --bg-color: #000b73;
-    --font-color: #ffffff;
+// Base styles
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: $background-color;
+    font-family: $font;
 }
-  
+
