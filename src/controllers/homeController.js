@@ -1,8 +1,12 @@
 const homeModel = require('../models/homeModel');
 
 exports.index = async (req, res) => {
+    if(!req.session.interviewConversationHistory) {
+        req.session.interviewConversationHistory = [];
+    }
+
     stages = await homeModel.getInterviewStages();
-    agentMsg = await homeModel.findAll();
+    agentMsg = await homeModel.findAll(req.session.interviewConversationHistory);
 
     res.render('home', 
         {

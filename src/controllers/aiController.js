@@ -8,7 +8,7 @@ exports.submitAnswer = async (req, res) => {
 
     if(!req.session.interviewConversationHistory) {
         req.session.interviewConversationHistory = [];
-      }
+    }
     const userMsg = {
         role:USER_ROLE,
         content:userAnswer

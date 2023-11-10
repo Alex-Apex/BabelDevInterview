@@ -15,15 +15,14 @@ const HomeModel = {
     /**
      * POC. Calls openAI and gets something from them
      */
-    findAll: async function(userMsg) {
+    findAll: async function(conversation) {
+        conversation.push({
+            role: "system",
+            content: "You are a professional English language evaluator.Please, welcome the candidate to BabelDev AI Interviewer App by Apex for his English interview. please respond with HTML formatted text but only use: p,i,bold, headers,etc. Be conversational but only make 1 question at a time. After 2 questions provide an English proficiency score (1-100)" 
+        });
         try{
             const completion = await openai.chat.completions.create({
-                messages: [
-                    {
-                        role: "system",
-                        content: "Please, welcome the Candidate to BabelDev AI Interviewer App for his English interview. Also please respond with HTML formatted text but only use: p,i,bold, headers,etc" 
-                    }
-                ],
+                messages: conversation,
                 model: "gpt-4-1106-preview",
             });          
             return completion.choices[0];
