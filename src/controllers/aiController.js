@@ -1,19 +1,18 @@
-// src/controllers/aiController.js
+const AIModel = require('../models/aiModel'); // Your AI model that handles interaction with OpenAI
 
-const AIModel = require('../models/aiModel'); // This would be your model that interacts with OpenAI
-
-exports.interactWithAI = async (req, res) => {
+exports.submitAnswer = async (req, res) => {
+    const userAnswer = req.body.userInput;
     try {
-        const userInput = req.body.userInput;
-        const aiResponse = await AIModel.getAIResponse(userInput);
+        // Process the user's answer and get the next question
+        const response = await AIModel.processAnswerAndGetNextQuestion(userAnswer);
 
-        // Render a view with the AI response or handle the response as needed
-        res.render('aiResponseView', {
-            userMessage: userInput,
-            aiMessage: aiResponse
+        // Send back the part of the page to be updated (the #ai-response div)
+        res.render('partials/aiResponse', {
+            englishQuestion: response.nextQuestion,
+            previousAnswer: userAnswer
         });
     } catch (error) {
-        console.error('Error interacting with AI:', error);
-        res.status(500).send('An error occurred during the interaction with the AI');
+        console.error('Error during AI interaction:', error);
+        res.status(500).send('An error occurred');
     }
 };

@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 const aiController = require('../controllers/aiController');
 
-router.post('/interact-with-ai', aiController.interactWithAI);
+// Handle the form submission
+router.post('/submit-answer', aiController.submitAnswer);
 
 module.exports = router;

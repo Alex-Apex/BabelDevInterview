@@ -1,18 +1,25 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const { engine } = require('express-handlebars');
+const { engine, create } = require('express-handlebars');
 const OpenAI = require('openai');
 const homeRoutes = require('./routes/homeRoutes');
 
 // Initialize Express
 const app = express();
 
+const hbs = create({
+    defaultLayout: 'main',
+    layoutsDir: path.join(__dirname, 'views/layouts'),
+    partialsDir: path.join(__dirname, 'views/partials'),
+    extname:'handlebars',
+});
+
 // Initialize OpenAI with API Key
 const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 // Set up Express Handlebars view engine
-app.engine('handlebars', engine());
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
