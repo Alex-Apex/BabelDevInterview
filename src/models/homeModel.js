@@ -15,14 +15,16 @@ const HomeModel = {
     /**
      * POC. Calls openAI and gets something from them
      */
-    findAll: async function() {
+    findAll: async function(userMsg) {
         try{
             const completion = await openai.chat.completions.create({
-              messages: [
-                { 
-                    role: "system",
-                    content: "Please, welcome the Candidate to BabelDev AI Interviewer App for his English interview. Also please respond with HTML formatted text but only use: p,i,bold, headers,etc" }],
-              model: "gpt-4-1106-preview",
+                messages: [
+                    {
+                        role: "system",
+                        content: "Please, welcome the Candidate to BabelDev AI Interviewer App for his English interview. Also please respond with HTML formatted text but only use: p,i,bold, headers,etc" 
+                    }
+                ],
+                model: "gpt-4-1106-preview",
             });          
             return completion.choices[0];
         } catch (error){

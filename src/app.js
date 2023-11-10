@@ -1,9 +1,11 @@
 require('dotenv').config();
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const { engine, create } = require('express-handlebars');
 const OpenAI = require('openai');
 const homeRoutes = require('./routes/homeRoutes');
+const aiInteractionRoutes = require('./routes/aiInteractionRoutes');
 
 // Initialize Express
 const app = express();
@@ -26,31 +28,25 @@ app.set('views', path.join(__dirname, 'views'));
 // Middleware to parse JSON and urlencoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// Setting up the session variables (to keep msg conversations). TODO: Conversation persistance with db should be a better bet
+app.use(
+    session({
+        secret: 'your_secret_key', // This is a secret key used to sign the session ID cookie
+        resave: false, // Forces the session to be saved back to the session store
+        saveUninitialized: true, // Forces a session that is "uninitialized" to be saved to the store
+        cookie: {
+            secure: process.env.NODE_ENV === 'production', // Ensures cookies are only used over HTTPS
+            maxAge: 1000 * 60 * 60 * 24 // Cookie expiration date, here it's set for one day
+        }
+    }));
 
 // Static files directory
 app.use(express.static('public'));
 app.use('/js', express.static(__dirname + '/node_modules/htmx.org/dist/'));
 
 // Define routes
+app.use('/', aiInteractionRoutes);
 app.use('/', homeRoutes);
-
-
-// Sample route for the interview API
-app.post('/interview', async (req, res) => {
-    try {
-        const { prompt } = req.body;
-        const response = await openai.createCompletion({
-            model: "text-davinci-003", // or your preferred model
-            prompt: prompt,
-            max_tokens: 150
-        });
-
-        return res.json(response.data);
-    } catch (error) {
-        console.error('Error with OpenAI API:', error);
-        return res.status(500).send('Error processing the interview');
-    }
-});
 
 // Handle 404 errors
 app.use((req, res, next) => {
