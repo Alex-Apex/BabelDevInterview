@@ -80,6 +80,11 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+#ai-interaction-form textarea#user-input {
+  font-family: Helvetica;
+  font-size: 1.1rem;
+  resize: none;
+}
 
 body, html {
   margin: 0;

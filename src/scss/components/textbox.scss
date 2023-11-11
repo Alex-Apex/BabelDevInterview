@@ -39,5 +39,10 @@
       flex-direction: row;
       justify-content: space-between;
     }
+    textarea#user-input {      
+      font-family: $font;      
+      font-size: 1.1rem;
+      resize: none;
+    }
   }
   
