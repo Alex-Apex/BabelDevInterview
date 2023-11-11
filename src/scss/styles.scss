@@ -12,13 +12,29 @@ body, html {
     font-family: $font;
 }
 
-.hx-fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+@keyframes fade-in {
+    from { opacity: 0; }
 }
 
-.hx-fade-in {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+@keyframes fade-out {
+    to { opacity: 0; }
 }
 
+@keyframes slide-from-right {
+from { transform: translateX(90px); }
+}
+
+@keyframes slide-to-left {
+to { transform: translateX(-90px); }
+}
+
+.fader {
+    view-transition-name: fader;
+}
+
+::view-transition-old(fader) {
+animation: 180ms cubic-bezier(0.4, 0, 1, 1) both fade-out;
+}
+::view-transition-new(fader) {
+animation: 420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in;
+}
