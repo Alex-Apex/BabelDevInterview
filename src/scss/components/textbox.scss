@@ -25,6 +25,11 @@
       &:hover {
         background-color: $teal2;
       }
+      &:disabled {
+        background-color: $grey1;
+        color: $grey2;
+        cursor: not-allowed;
+    }
     }
     .txtUserTextbox {
       width: 100%;

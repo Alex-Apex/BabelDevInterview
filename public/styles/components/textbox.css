@@ -22,6 +22,11 @@
 #ai-interaction-form button:hover {
   background-color: #9FE2D8;
 }
+#ai-interaction-form button:disabled {
+  background-color: #808083;
+  color: #D2DDE8;
+  cursor: not-allowed;
+}
 #ai-interaction-form .txtUserTextbox {
   width: 100%;
   border: 2px solid #808083;

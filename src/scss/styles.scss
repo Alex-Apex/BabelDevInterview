@@ -12,3 +12,13 @@ body, html {
     font-family: $font;
 }
 
+.hx-fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hx-fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
