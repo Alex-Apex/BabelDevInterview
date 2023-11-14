@@ -1,5 +1,7 @@
-const AIModel = require('../models/aiModel'); // Your AI model that handles interaction with OpenAI
+const fs = require('fs');
+const path = require('path');
 
+const AIModel = require('../models/aiModel'); // Your AI model that handles interaction with OpenAI
 const USER_ROLE = 'user';
 const SYSTEM_ROLE = 'assistant';
 
@@ -28,6 +30,26 @@ exports.submitAnswer = async (req, res) => {
             layout: false,
             openAIMessage: response,            
             previousAnswer: userAnswer
+        });
+    } catch (error) {
+        console.error('Error during AI interaction:', error);
+        res.status(500).send('An error occurred');
+    }
+};
+
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
+exports.submitSpeech = async (req, res) => {
+    try {
+        const speechFile = await AIModel.getAISpeech('Welcome to BabelDev AI Interviewer!');
+        // Send back the part of the page to be updated (the #ai-response div)
+        res.render('partials/aiSpeechResponse', 
+        {
+            layout: false,            
+            aiSpeechUrl: './speech/speech.mp3',//speechFile, // URL to the mp3 file
         });
     } catch (error) {
         console.error('Error during AI interaction:', error);

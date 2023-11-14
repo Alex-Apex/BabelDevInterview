@@ -1,6 +1,10 @@
 <form id="ai-interaction-form" hx-post="/submit-answer" hx-target="#ai-response" hx-swap="outerHTML transition:true">
     <div class="txtUserTextbox">
         <textarea id="user-input" name="userInput" placeholder="Type your answers here..." required></textarea>                
-        <button type="submit" id="btnSend" >Send</button>
+        <button type="submit" id="btnSend">Send</button>
+        <button id="btnGetSpokenAudio" hx-post="/submit-speech" hx-target="#speech-container" hx-swap="outerHTML">Send Speech</button>
+        <!--<button id="btnStartVerbalInterview">Start Verbal Interview</button>-->
+        <button id="btnStartSpeechRecog" onclick="startRecognition()">Start Speaking</button>
+        <button id="btnStopSpeechRecog" onclick="stopRecognition()" style="display:none">Stop Listening</button>
     </div>
 </form>
