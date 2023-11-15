@@ -34,7 +34,7 @@ exports.getAISpeech = async (aiText) => {
     voice:"shimmer",
     input:aiText,
   });
-  console.log(aiSpeechFile);
+  
   const buffer = Buffer.from(await mp3.arrayBuffer());
   await fs.promises.writeFile(aiSpeechFile, buffer);
   return aiSpeechFile;  
