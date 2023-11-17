@@ -5,6 +5,23 @@ body {
   grid-template-areas: "topbar topbar" "content content";
 }
 
+#container {
+  display: grid;
+  grid-area: content;
+  height: calc(100vh - 50px);
+  grid-template-areas: "sidebar main" "sidebar main" "sidebar user";
+  grid-template-rows: 1fr auto 80px;
+  grid-template-columns: 250px auto;
+  background-color: #fff;
+}
+
+#content {
+  grid-area: main;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
 #top-bar {
   grid-area: topbar;
   height: 50px;
@@ -19,28 +36,31 @@ body {
   font-weight: 600;
 }
 
-#container {
-  display: grid;
-  grid-area: content;
-  height: calc(100vh - 50px);
-  grid-template-areas: "sidebar main" "sidebar main" "sidebar user";
-  grid-template-rows: 1fr auto 80px;
-  grid-template-columns: 250px auto;
-  background-color: #fff;
-}
-
 #sidebar {
   grid-area: sidebar;
   background-color: #D2DDE8;
   padding: 20px;
   box-sizing: border-box;
 }
+#sidebar .sideBarMenuItem {
+  background-color: rgba(0, 255, 255, 0.34);
+}
+#sidebar .selected {
+  color: red;
+}
 
-#content {
-  grid-area: main;
-  padding: 20px;
-  overflow-y: auto;
-  background-color: #fff;
+#conversation-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  justify-content: space-between;
+}
+#conversation-container #user-container {
+  background-color: #D2DDE8;
+  color: #7C95A5;
+}
+#conversation-container #ai-container {
+  background-color: #44546A;
 }
 
 #ai-interaction-form {

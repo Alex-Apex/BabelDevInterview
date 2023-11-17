@@ -19,3 +19,12 @@ exports.index = async (req, res) => {
         }
     );
 };
+
+exports.testSwap2 = async (req, res) => {
+    console.log('Test Swap 2 things');
+    res.render('partials/aiSpeechResponse',
+    {
+        layout: false,
+    }
+    );
+};

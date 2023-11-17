@@ -64,7 +64,7 @@ exports.submitSpeech = async (req, res) => {
         try {
             const speechFile = await AIModel.getAISpeech(response);
             // Send back the part of the page to be updated (the #ai-response div)
-            res.render('partials/aiSpeechResponse', 
+            res.render('partials/aiSpeechResponse',
             {
                 layout: false,            
                 aiSpeechUrl: './speech/speech.mp3',//speechFile, // URL to the mp3 file

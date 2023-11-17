@@ -1,0 +1,15 @@
+#top-bar {
+  grid-area: topbar;
+  height: 50px;
+  background-color: #44546A;
+  color: #7C95A5;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: Helvetica;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=topbar.css.map */

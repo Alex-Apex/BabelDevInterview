@@ -1,7 +1,7 @@
-<aside id="sidebar">
+<aside id="sidebar" hx-swap-oob="true">
     <h2>{{{sidebar}}}</h2>
     {{#each interviewStages}}
-        <div class="sideBarMenuItem">
+        <div class="sideBarMenuItem" id={{this.id}}>
             {{this.StageName}}
         </div>
     {{/each}}

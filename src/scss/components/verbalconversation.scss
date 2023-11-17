@@ -1,0 +1,16 @@
+@import '../variables';
+
+#conversation-container {
+    display:flex;
+    flex-direction: row;
+    column-gap: 8px;
+    justify-content: space-between;
+    #user-container {
+        background-color: $background-color;
+        color:$text-color;
+    }
+
+    #ai-container {
+        background-color: $apex-blue;
+    }
+}

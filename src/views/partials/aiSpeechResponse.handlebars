@@ -1,5 +1,16 @@
-<div id="speech-container"></div>
-    <audio id="audioPlayer" autoplay>
-        <source src={{aiSpeechUrl}} type="audio/mpeg">
-    </audio>
+<div id="ai-response" class="fader" hx-swap-oob="true">
+    <div id="conversation-container" hx-swap-oob="true">
+        <div id="user-container">
+            <h1>User</h1>
+        </div>
+        <div id="ai-container">
+            <div id="speech-container">
+                <audio id="audioPlayer" autoplay>
+                    <source src={{aiSpeechUrl}} type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div class="sideBarMenuItem" id="verbal" hx-swap-oob="true"><div class="selected">Verbal Conversation</div></div>

@@ -1,6 +1,9 @@
 // styles.scss
 @import 'variables';
 @import 'layout';
+@import 'components/topbar.scss';
+@import 'components/sidebar.scss';
+@import 'components/verbalconversation.scss';
 @import 'components/textbox';
 
 // Base styles

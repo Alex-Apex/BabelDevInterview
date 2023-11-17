@@ -1,0 +1,14 @@
+#sidebar {
+    grid-area:sidebar;
+    background-color: $background-color;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .sideBarMenuItem {
+        background-color: rgba(0, 255, 255, 0.34);
+    }
+    
+    .selected {
+        color:red;
+    }
+  }

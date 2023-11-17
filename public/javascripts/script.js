@@ -34,29 +34,7 @@ document.getElementById('user-input').addEventListener('input', function() {
     const audioUrl = URL.createObjectURL(audioBlob);
     // You can now send this audioBlob to your server or play it using an audio element  
   };
-/*
-  document.getElementById('btnStartVerbalInterview').addEventListener('click', function() {
-    let mediaRecorder;
-    let audioChunks = [];
 
-    navigator.mediaDevices.getUserMedia({ audio: true }) //TODO: Notify the user in advance the app will request permission to record
-        .then(function(stream) {
-            // You now have access to the user's microphone
-            // TODO: UX -> show the user you're listening
-            console.log('Microphone access granted');
-            mediaRecorder = new MediaRecorder(stream);
-            mediaRecorder.ondataavailable = (event) => handleOnDataAvailable(event,audioChunks);
-            mediaRecorder.onstop = handleRecordedAudio
-            mediaRecorder.start();
-
-            mediaRecorder.stop();
-        })
-        .catch(function(err) {
-            console.error('Error accessing the microphone', err);
-            // Handle the error, inform the user they need to allow microphone access
-        });
-});
-*/
 let recognition;
 if ('webkitSpeechRecognition' in window) {
   recognition = new webkitSpeechRecognition();

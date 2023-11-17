@@ -1,0 +1,15 @@
+#conversation-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  justify-content: space-between;
+}
+#conversation-container #user-container {
+  background-color: #D2DDE8;
+  color: #7C95A5;
+}
+#conversation-container #ai-container {
+  background-color: #44546A;
+}
+
+/*# sourceMappingURL=verbalconversation.css.map */
