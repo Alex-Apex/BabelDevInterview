@@ -4,7 +4,7 @@
         <button type="submit" id="btnSend">Send</button>
         <button id="btnStartSpeechRecog" onclick="startRecognition()">Start Speaking</button>
         <button id="btnStopSpeechRecog" onclick="stopRecognition()" style="display:none">Stop Listening</button>
-        <button id="btnGetSpokenAudio" hx-post="/submit-speech" hx-target="#speech-container" hx-swap="outerHTML">Send Speech</button>
-        <button id="btnTestSwap2" hx-target="#ai-response" hx-post="/test-swap2" hx-swap="outerHTML transition:true">Swap 2 things</button>
+        <button id="btnGetSpokenAudio" hx-post="/submit-speech" hx-target="#ai-response" hx-swap="outerHTML" hx-select="#ai-response">Send Speech</button>
+        <!--button id="btnTestSwap2" hx-target="#ai-response" hx-post="/test-swap2" hx-swap="outerHTML transition:true">Swap 2 things</button-->
     </div>
 </form>
