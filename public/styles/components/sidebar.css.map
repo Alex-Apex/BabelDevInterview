@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"sidebar.css"}
+{"version":3,"sourceRoot":"","sources":["../../../src/scss/components/sidebar.scss","../../../src/scss/_variables.scss"],"names":[],"mappings":"AAEA;EACI;EACA,kBCOG;EDNH;EACA;;AAEA;EACI;EACA;;AAGJ;EACI,OCLI;EDMJ,kBCHD;EDIC;;AAEA;EACI;;AAGJ;EACI;EACA;EACA;EACA;EACA,kBChBL;EDiBK;;AAEJ;EACI;EACA;;AAEJ;EACI;EACA","file":"sidebar.css"}

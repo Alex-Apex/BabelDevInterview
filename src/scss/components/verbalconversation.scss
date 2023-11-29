@@ -5,12 +5,25 @@
     flex-direction: row;
     column-gap: 8px;
     justify-content: space-between;
+    height:100%;
     #user-container {
         background-color: $background-color;
         color:$text-color;
+        width: 100%;
+        border-radius: 8px;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     #ai-container {
         background-color: $apex-blue;
+        width: 100%;
+        border-radius: 8px;
+        padding: 20px;
+        box-sizing: border-box;
+        color:$text-color;
     }
+}
+#ai-response {
+    height:100%;
 }

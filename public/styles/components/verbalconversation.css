@@ -3,13 +3,27 @@
   flex-direction: row;
   column-gap: 8px;
   justify-content: space-between;
+  height: 100%;
 }
 #conversation-container #user-container {
   background-color: #D2DDE8;
   color: #7C95A5;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 #conversation-container #ai-container {
   background-color: #44546A;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #7C95A5;
+}
+
+#ai-response {
+  height: 100%;
 }
 
 /*# sourceMappingURL=verbalconversation.css.map */

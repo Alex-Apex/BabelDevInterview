@@ -1,17 +1,36 @@
-/* Error: Undefined variable.
- *   ,
- * 3 |     background-color: $background-color;
- *   |                       ^^^^^^^^^^^^^^^^^
- *   '
- *   src/scss/components/sidebar.scss 3:23  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 3 \2502      background-color: $background-color;\a   \2502                        ^^^^^^^^^^^^^^^^^\a   \2575 \a   src/scss/components/sidebar.scss 3:23  root stylesheet";
+#sidebar {
+  grid-area: sidebar;
+  background-color: #D2DDE8;
+  padding: 20px;
+  box-sizing: border-box;
 }
+#sidebar .sideBarMenuItem {
+  display: block;
+  padding-left: 8px;
+}
+#sidebar .selected {
+  color: #7C95A5;
+  background-color: #fff;
+  width: 230px;
+}
+#sidebar .selected::first-letter {
+  margin-left: 4px;
+}
+#sidebar .selected::before, #sidebar .selected::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 12px;
+  background-color: #D2DDE8;
+  margin-left: -8px;
+}
+#sidebar .selected::before {
+  border-bottom-right-radius: 8px;
+  margin-bottom: 8px;
+}
+#sidebar .selected::after {
+  border-top-right-radius: 8px;
+  margin-top: 8px;
+}
+
+/*# sourceMappingURL=sidebar.css.map */

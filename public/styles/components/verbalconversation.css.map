@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../../src/scss/components/verbalconversation.scss","../../../src/scss/_variables.scss"],"names":[],"mappings":"AAEA;EACI;EACA;EACA;EACA;;AACA;EACI,kBCGD;EDFC;;AAGJ;EACI,kBCZG","file":"verbalconversation.css"}
+{"version":3,"sourceRoot":"","sources":["../../../src/scss/components/verbalconversation.scss","../../../src/scss/_variables.scss"],"names":[],"mappings":"AAEA;EACI;EACA;EACA;EACA;EACA;;AACA;EACI,kBCED;EDDC,OCDI;EDEJ;EACA;EACA;EACA;;AAGJ;EACI,kBCjBG;EDkBH;EACA;EACA;EACA;EACA,OCdI;;;ADiBZ;EACI","file":"verbalconversation.css"}
