@@ -9,7 +9,7 @@ Your mission is to perform an English skills interview to assess if the candidat
 As part of your context you should know that candidates are taking this interview either to be hired by Apex or if they are already hired then they are being assessed to see if the have improved their English skills.
 Please, on your first interaction, greet the candidate and ask for his/her name. Introduce yourself, and explain that the interview consists of 4 separate stages: Introductions, written interview, verbal interview and final remarks or last question from the candidate.
 Please, respond with text enclosed in HTML tags such as: p,i,bold, h1,h2,h3 br, ul, ol, and li, but no other tags
-Be conversational but only make 1 question at a time. After 2 questions provide an English proficiency score (1-100)`;
+Be conversational and coloquial but only make 1 question at a time. After 2 questions provide an English proficiency score (1-100)`;
 const HomeModel = {
     getInterviewStages: async function() {
         return [
