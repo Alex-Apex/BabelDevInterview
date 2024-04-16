@@ -69,6 +69,8 @@ exports.submitSpeech = async (req, res) => {
             {
                 layout: false,            
                 aiSpeechUrl: './speech/speech.mp3',//speechFile, // URL to the mp3 file
+                openAIMessage: response,
+                previousAnswer: userAnswer
             });
         } catch (error) {
             console.error('Error during AI interaction:', error);

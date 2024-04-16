@@ -5,7 +5,7 @@
         <button id="btnStartSpeechRecog" onclick="startRecognition()">Start Speaking</button>
         <button id="btnStopSpeechRecog" onclick="stopRecognition()" style="display:none">Stop Listening</button>
         <button id="btnGetSpokenAudio" hx-post="/submit-speech"
-            hx-target="#ai-response" hx-swap="outerHTML"
+            hx-target="#ai-response" hx-swap="outerHTML transition:true"
             hx-select="#ai-response">Send Speech</button>
     </div>
 </form>
